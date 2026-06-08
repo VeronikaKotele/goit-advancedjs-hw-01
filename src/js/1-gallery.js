@@ -88,22 +88,7 @@ const galleryItems = images.map(makeGalleryItem);
 const galleryEl = document.querySelector('.gallery');
 galleryEl.append(...galleryItems);
 
-// galleryEl.addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   const linkEl = event.target.closest(".gallery-link");
-//   if (!linkEl) {
-//     //Clicked outside of a gallery link
-//     return;
-//   }
-
-//   const instance = basicLightbox.create(`
-//       <img src="${linkEl.href}" width="800" height="600">
-//   `);
-//   instance.show();
-// });
-
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm.js";
+import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const lightbox = new SimpleLightbox('.gallery li a', { captionsData: 'alt', captionDelay: 250 });
